@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - [NAYSILLA FINTA NUR NABELLA]</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBlue: '#0B1120',    /* Background Utama */
+                        lightBlue: '#1E293B',   /* Background Card / Elemen Sekunder */
+                        accentPink: '#EC4899',  /* Aksen Pink */
+                        accentPinkHover: '#BE185D'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0B1120;
+            color: #F8FAFC;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B1120; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1E293B; 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #EC4899; 
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #60A5FA, #EC4899);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-accentPink selection:text-white text-sm">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md bg-darkBlue/80 border-b border-lightBlue/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold tracking-wider hover:text-accentPink transition-colors">
+                        [ABELL]<span class="text-accentPink">.</span>
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="hover:text-accentPink transition-colors px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#skills" class="hover:text-accentPink transition-colors px-3 py-2 rounded-md text-sm font-medium">What I Can Do</a>
+                        <a href="#achievements" class="hover:text-accentPink transition-colors px-3 py-2 rounded-md text-sm font-medium">Achievement</a>
+                        <a href="#contact" class="bg-accentPink hover:bg-accentPinkHover text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-lg shadow-accentPink/30">Contact Me</a>
+                    </div>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-lightBlue border-b border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#about" class="block hover:text-accentPink px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#skills" class="block hover:text-accentPink px-3 py-2 rounded-md text-base font-medium">What I Can Do</a>
+                <a href="#achievements" class="block hover:text-accentPink px-3 py-2 rounded-md text-base font-medium">Achievement</a>
+                <a href="#contact" class="block text-accentPink font-bold px-3 py-2 rounded-md text-base">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 md:pt-48 md:pb-32 px-4 flex flex-col items-center justify-center min-h-screen text-center">
+        <div class="relative mb-8 group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-accentPink rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+            <img src="c:\Users\naysi\OneDrive\Dokumen\11_Naysilla.jpeg" alt="Profile Foto" class="relative w-36 h-36 md:w-48 md:h-48 rounded-full object-cover border-4 border-darkBlue shadow-2xl">
+        </div>
+        <h2 class="text-base md:text-lg text-blue-400 font-medium mb-2 tracking-wide uppercase">Halo, Selamat Datang!</h2>
+        <h1 class="text-3xl md:text-5xl font-bold mb-4">Saya <span class="text-gradient">[NAYSILLA FINTA NUR NABELLA]</span></h1>
+        <p class="text-gray-400 max-w-2xl text-sm md:text-base mb-10 leading-relaxed">
+            [Saya Mahasiswa Pendidikan Teknologi Informasi yang tertarik pada Web Development dan Artificial Intelligence serta Sainsdata.]
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#about" class="bg-lightBlue hover:bg-gray-700 text-white border border-gray-600 px-8 py-3 rounded-full font-medium transition-all flex items-center justify-center gap-2">
+                Explore More <i class="fas fa-arrow-down text-sm"></i>
+            </a>
+            <a href="#contact" class="bg-accentPink hover:bg-accentPinkHover text-white px-8 py-3 rounded-full font-medium transition-all shadow-lg shadow-accentPink/30 flex items-center justify-center gap-2">
+                Hire Me <i class="fas fa-paper-plane text-sm"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-darkBlue px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-2">About <span class="text-accentPink">Me</span></h2>
+                <div class="w-20 h-1 bg-accentPink mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Deskripsi Profil -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold text-blue-300">Profil Singkat</h3>
+                    <p class="text-gray-300 leading-relaxed text-sm md:text-base text-justify">
+                        [Saya adalah mahasiswa baru pada jurusan Pendidikan Teknologi Informasi di Universitas Negeri Surabaya. saya pernah mengikuti beberapa organisasi dan kepanitiaan semasa SMA. Memiliki kemampuan public speaking, Time management, dan problem solving. saya tertarin pada bidang web development, artificial intelligence dan sains data]
+                    </p>
+                </div>
+                
+                <!-- Identitas & Pendidikan -->
+                <div class="bg-lightBlue p-8 rounded-2xl border border-gray-700 shadow-xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-accentPink rounded-bl-full opacity-10 -z-10 group-hover:scale-110 transition-transform"></div>
+                    <ul class="space-y-5">
+                        <li class="flex border-b border-gray-700 pb-3">
+                            <span class="w-1/3 text-gray-400 font-medium">Nama Lengkap</span>
+                            <span class="w-2/3 text-white font-semibold">[Naysilla Finta Nur Nabella]</span>
+                        </li>
+                        <li class="flex border-b border-gray-700 pb-3">
+                            <span class="w-1/3 text-gray-400 font-medium">NIM</span>
+                            <span class="w-2/3 text-white font-semibold">[26050974070]</span>
+                        </li>
+                        <li class="flex border-b border-gray-700 pb-3">
+                            <span class="w-1/3 text-gray-400 font-medium">Program Studi</span>
+                            <span class="w-2/3 text-white font-semibold">[Pendidikan Teknologi Informasi]</span>
+                        </li>
+                        <li class="flex border-b border-gray-700 pb-3">
+                            <span class="w-1/3 text-gray-400 font-medium">Pendidikan</span>
+                            <span class="w-2/3 text-white font-semibold">[Universitas Negeri Surabaya]</span>
+                        </li>
+                        <li class="flex">
+                            <span class="w-1/3 text-gray-400 font-medium">Aktivitas Saat Ini</span>
+                            <span class="w-2/3 text-white font-semibold text-accentPink">[Mahasiswa pada Universitas Negeri Surabaya]</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I Can Do Section -->
+    <section id="skills" class="py-20 bg-darkBlue relative px-4">
+        <!-- Dekorasi Background -->
+        <div class="absolute top-1/2 left-0 w-64 h-64 bg-blue-900 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -translate-y-1/2"></div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-2">What I <span class="text-accentPink">Can Do</span></h2>
+                <div class="w-20 h-1 bg-accentPink mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Kemampuan dan tools yang saya kuasai untuk membangun sistem yang handal, memecahkan masalah, dan mendukung alur kerja digital.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Skill Card 1 -->
+                <div class="bg-lightBlue p-8 rounded-2xl border border-gray-700 hover:-translate-y-2 hover:border-accentPink transition-all duration-300 shadow-lg group">
+                    <div class="w-14 h-14 bg-darkBlue rounded-xl flex items-center justify-center text-2xl text-accentPink mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">[Team Work]</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        [Dengan kemampuan saya ini saya dapat bekerjasama dengan baik dengan rekan kerja tim .]
+                    </p>
+                    <!-- Tools Tags -->
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-darkBlue text-blue-300 px-3 py-1 rounded-full border border-gray-600">[TOOL 1, cth: HTML]</span>
+                        <span class="text-xs bg-darkBlue text-blue-300 px-3 py-1 rounded-full border border-gray-600">[TOOL 2, cth: CSS]</span>
+                        <span class="text-xs bg-darkBlue text-blue-300 px-3 py-1 rounded-full border border-gray-600">[TOOL 3, cth: React]</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="bg-lightBlue p-8 rounded-2xl border border-gray-700 hover:-translate-y-2 hover:border-accentPink transition-all duration-300 shadow-lg group">
+                    <div class="w-14 h-14 bg-darkBlue rounded-xl flex items-center justify-center text-2xl text-accentPink mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">[Database Management]</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        [Merancang dan mengelola basis data untuk memastikan integritas dan keamanan data.]
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-darkBlue text-blue-300 px-3 py-1 rounded-full border border-gray-600">[TOOL 1]</span>
+                        <span class="text-xs bg-darkBlue text-blue-300 px-3 py-1 rounded-full border border-gray-600">[TOOL 2]</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="bg-lightBlue p-8 rounded-2xl border border-gray-700 hover:-translate-y-2 hover:border-accentPink transition-all duration-300 shadow-lg group">
+                    <div class="w-14 h-14 bg-darkBlue rounded-xl flex items-center justify-center text-2xl text-accentPink mb-6 group-hover:scale-110 transition-transform shadow-inner">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">[Time management]</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        [mengatur waktu dengan efisien membuat seluruh aktivitas saya berjalan dengan terstruktur.]
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-darkBlue text-blue-300 px-3 py-1 rounded-full border border-gray-600">[TOOL 1]</span>
+                        <span class="text-xs bg-darkBlue text-blue-300 px-3 py-1 rounded-full border border-gray-600">[TOOL 2]</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievement Section -->
+    <section id="achievements" class="py-20 bg-darkBlue px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-2">My <span class="text-accentPink">Achievements</span></h2>
+                <div class="w-20 h-1 bg-accentPink mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="space-y-8">
+                
+                <!-- Achievement Item 1 -->
+                <div class="bg-lightBlue rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start md:items-center border-l-4 border-accentPink shadow-lg hover:bg-gray-800 transition-colors">
+                    <div class="bg-darkBlue text-accentPink font-bold px-4 py-2 rounded-lg text-center min-w-[100px] shadow-inner">
+                        [2024]
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-white mb-1">[Pramuka Garuda]</h3>
+                        <p class="text-blue-400 text-sm font-medium mb-3"><i class="fas fa-building mr-2"></i>[Gerakan Pramuka Kwartir Cabang Lamongan]</p>
+                        <p class="text-gray-400 text-sm">
+                            [Berhasil mendapatkan penghargaan pramuka garuda dan menyelesaikan seluruh rangkaian tesnya.]
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-darkBlue relative px-4 border-t border-lightBlue">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row gap-12 items-center">
+            
+            <!-- Left Info -->
+            <div class="lg:w-1/2 w-full text-center lg:text-left space-y-6">
+                <p class="text-accentPink font-semibold tracking-widest text-sm uppercase">Get In Touch</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-white">Let's Work <br> <span class="text-blue-400">Together</span></h2>
+                <p class="text-gray-400 text-sm md:text-base max-w-md mx-auto lg:mx-0 leading-relaxed">
+                    Tertarik untuk berkolaborasi atau memiliki proyek yang ingin dikembangkan? Jangan ragu untuk menghubungi saya!
+                </p>
+                <div class="pt-4">
+                    <!-- Tombol Download CV -->
+                    <a href="[file:///C:/Users/naysi/Downloads/CV_Naysilla%20Finta%20Nur%20Nabella.pdf]" target="_blank" class="inline-flex items-center gap-3 bg-white text-darkBlue hover:bg-accentPink hover:text-white px-8 py-4 rounded-full font-bold transition-all duration-300 shadow-lg">
+                        Download Resume <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Contact Cards -->
+            <div class="lg:w-1/2 w-full flex flex-col gap-4">
+                
+                <!-- Email Card -->
+                <a href="mailto:[nyslfn@gmail.com]" class="flex items-center gap-6 bg-lightBlue p-6 rounded-2xl hover:bg-gray-800 border border-transparent hover:border-accentPink transition-all group">
+                    <div class="w-12 h-12 bg-darkBlue flex items-center justify-center rounded-full text-accentPink group-hover:scale-110 transition-transform">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-semibold tracking-wider uppercase mb-1">Email</p>
+                        <p class="text-white font-medium break-all">[nyslfn@gmail.com]</p>
+                    </div>
+                </a>
+
+                <!-- GitHub Card -->
+                <a href="[https://github.com/naysillafinta]" target="_blank" class="flex items-center gap-6 bg-lightBlue p-6 rounded-2xl hover:bg-gray-800 border border-transparent hover:border-white transition-all group">
+                    <div class="w-12 h-12 bg-darkBlue flex items-center justify-center rounded-full text-white group-hover:scale-110 transition-transform">
+                        <i class="fab fa-github text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-semibold tracking-wider uppercase mb-1">GitHub</p>
+                        <p class="text-white font-medium break-all">[https://github.com/naysillafinta]</p>
+                    </div>
+                </a>
+
+                <!-- LinkedIn Card -->
+                <a href="[https://www.linkedin.com/in/naysilla-finta-nur-nabella]" target="_blank" class="flex items-center gap-6 bg-lightBlue p-6 rounded-2xl hover:bg-gray-800 border border-transparent hover:border-blue-500 transition-all group">
+                    <div class="w-12 h-12 bg-darkBlue flex items-center justify-center rounded-full text-blue-500 group-hover:scale-110 transition-transform">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 font-semibold tracking-wider uppercase mb-1">LinkedIn</p>
+                        <p class="text-white font-medium break-all">[https://www.linkedin.com/in/naysilla-finta-nur-nabella]</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkBlue py-8 text-center border-t border-lightBlue">
+        <p class="text-gray-500 text-sm">
+            &copy; 2026 <span class="text-gray-300 font-medium">[Naysilla Finta Nur Nabella]</span>. All rights reserved.
+        </p>
+    </footer>
+
+    <!-- Script for Interactivity -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
